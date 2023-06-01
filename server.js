@@ -2,8 +2,9 @@ import express from 'express'
 import dotenv from 'dotenv'
 import router from './routes/router.js';
 import dbConnect from './models/db.js';
-
+import cors from 'cors';
 const app = express();
+app.use(cors())
 dotenv.config({ path: ".env" });
 dbConnect()
 
